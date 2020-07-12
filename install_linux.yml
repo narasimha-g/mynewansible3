@@ -9,10 +9,14 @@
      yum:
       name: httpd
       state: present 
+     tags:
+      - install linux
   
    - name: i want to start service linux on ubuntu16.4
      service:
       name: httpd
-      state: started  
+      state: started 
+     tags:
+      - start service  
 
       
