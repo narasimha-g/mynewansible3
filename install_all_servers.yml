@@ -17,7 +17,7 @@
      yum:
       name: httpd
       state: present 
-     when: ansible_os_family=="Linux"
+     when: ansible_os_family=="RedHat"
      tags:
       - install linux
 
@@ -34,7 +34,7 @@
      service:
       name: httpd
       state: started
-     when: ansible_os_family=="Linux" 
+     when: ansible_os_family=="RedHat" 
      tags:
       - start service  
  
