@@ -1,0 +1,48 @@
+--- 
+ - name: install web servers on ubuntu16.4
+   hosts: 172.31.2.201 # (this is ubuntu node)
+   #hosts: all
+   become: yes
+   gather_facts: yes
+   tasks:
+   - name: insatll webservers on ubuntu16.4 
+     apt: 
+      name: apache2
+      state: present 
+     tags:
+      - install apache2  
+
+   - name: insatll git on ubuntu16.4 
+     apt: 
+      name: git 
+      state: present
+     tags:
+      - install git   
+
+   - name: insatll tree  on ubuntu16.4 
+     apt: 
+      name: tree  
+      state: latest 
+     tags:
+      - install tree 
+
+   - name: insatll wget on ubuntu16.4 
+     apt: 
+      name: wget 
+      state: latest 
+     tags:
+      - install wget  
+
+   - name: start service webserver on ubuntu16.4 
+     service: 
+      name: apache2
+      state: started
+     tags:
+      - install service 
+
+
+
+     
+     
+     
+  
