@@ -11,7 +11,7 @@
       state: present 
      when: ansible_os_family=="Debian"
      tags:
-      - install apache2 
+      - install {{webserver_on_ubuntu}} 
 
    - name: i want to install linux on ubuntu16.4
      yum:
@@ -19,7 +19,7 @@
       state: present 
      when: ansible_os_family=="RedHat"
      tags:
-      - install linux
+      - install {{webserver_on_redhat}}
 
    
    - name: start service webserver on ubuntu16.4 
@@ -28,7 +28,7 @@
       state: started
      when: ansible_os_family=="Debian"
      tags:
-      - install service 
+      - install {{webserver_on_ubuntu}} 
 
    - name: i want to start service linux on ubuntu16.4
      service:
@@ -36,5 +36,5 @@
       state: started
      when: ansible_os_family=="RedHat" 
      tags:
-      - start service  
+      - start {{webserver_on_redhat}}  
  
