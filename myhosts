@@ -2,12 +2,10 @@
 172.31.0.55  # linux node2
 
 [webserver]
-
 172.31.2.201 # ubuntu node1
 172.31.0.55  # linux node2
 
 [application_server]
-
 192.168.0.201 # (to cretae example of application servers)
 192.0.0.55  
 
@@ -20,3 +18,4 @@
 
 [redhat_servers]
 172.31.0.55  # linux node2
+
