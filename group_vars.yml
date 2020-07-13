@@ -10,16 +10,16 @@
       name: "{{webserver_on_ubuntu}}"
       state: present 
      when: ansible_os_family=="Debian"
-     tags:
-      - install {{webserver_on_ubuntu}} 
+     #tags:
+      #- install {{webserver_on_ubuntu}} 
 
    - name: i want to install linux on ubuntu16.4
      yum:
       name: "{{webserver_on_redhat}}"
       state: present 
      when: ansible_os_family=="RedHat"
-     tags:
-      - install {{webserver_on_redhat}}
+    # tags:
+     # - install {{webserver_on_redhat}}
 
    
    - name: start service webserver on ubuntu16.4 
@@ -27,14 +27,14 @@
       name: "{{webserver_on_ubuntu"
       state: started
      when: ansible_os_family=="Debian"
-     tags:
-      - install {{webserver_on_ubuntu}} 
+     #tags:
+      #- install {{webserver_on_ubuntu}} 
 
    - name: i want to start service linux on ubuntu16.4
      service:
       name: "{{webserver_on_redhat}}"
       state: started
      when: ansible_os_family=="RedHat" 
-     tags:
-      - start {{webserver_on_redhat}}  
+     #tags:
+      #- start {{webserver_on_redhat}}  
  
