@@ -7,7 +7,7 @@
 
    - name: insatll webservers on ubuntu16.4 
      apt: 
-      name: "{{webserver_on_ubuntu}}"
+      name: apache2
       state: present 
      when: ansible_os_family=="Debian"
      #tags:
