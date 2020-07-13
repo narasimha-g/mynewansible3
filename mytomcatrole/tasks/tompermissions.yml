@@ -1,0 +1,57 @@
+--- 
+ - name: change directory 
+   file:
+    path: /opt/tomcat
+    state: directory
+   
+ - name:  change ownership of a directory
+   file:
+     path: /opt/tomcat
+     state: directory
+     recurse: yes
+     group: tomcat
+
+ - name:  tomcat config file 
+   file:
+     path: /opt/tomcat/conf
+     state: directory
+     mode: g+r
+     recurse: yes
+     group: tomcat
+
+ - name:  tomcat config file 
+   file:
+     path: /opt/tomcat/conf
+     state: directory
+     mode: g+x
+     group: tomcat
+
+ - name:  change owner to webapps 
+   file:
+     path: /opt/tomcat/webapps/
+     state: directory
+     recurse: yes
+     group: tomcat
+
+ - name:  change owner to work 
+   file:
+     path: /opt/tomcat/work/
+     state: directory
+     recurse: yes
+     group: tomcat
+
+ - name:   change owner to temp 
+   file:
+     path: /opt/tomcat/temp/
+     state: directory
+     recurse: yes
+     group: tomcat
+
+ - name:   change owner to logs 
+   file:
+     path: /opt/tomcat/logs/
+     state: directory
+     recurse: yes
+     group: tomcat
+
+ 

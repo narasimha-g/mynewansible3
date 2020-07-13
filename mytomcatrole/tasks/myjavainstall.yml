@@ -1,0 +1,9 @@
+--- 
+ - name: Update package
+   apt:
+    name: foo
+    update_cache: yes
+ - name: i want to install java
+   apt:
+    name: default-jdk
+    state: latest 
