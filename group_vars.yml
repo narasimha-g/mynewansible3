@@ -1,0 +1,40 @@
+--- 
+ - name: create group varibles  on ubuntu16.4
+   hosts: webserver
+   become: yes
+   gather_facts: yes
+   tasks:
+
+   - name: insatll webservers on ubuntu16.4 
+     apt: 
+      name: "{{webserver_on_ubuntu}}"
+      state: present 
+     when: ansible_os_family=="Debian"
+     tags:
+      - install apache2 
+
+   - name: i want to install linux on ubuntu16.4
+     yum:
+      name: "{{webserver_on_redhat}}"
+      state: present 
+     when: ansible_os_family=="RedHat"
+     tags:
+      - install linux
+
+   
+   - name: start service webserver on ubuntu16.4 
+     service: 
+      name: "{{webserver_on_ubuntu"
+      state: started
+     when: ansible_os_family=="Debian"
+     tags:
+      - install service 
+
+   - name: i want to start service linux on ubuntu16.4
+     service:
+      name: "{{webserver_on_redhat}}"
+      state: started
+     when: ansible_os_family=="RedHat" 
+     tags:
+      - start service  
+ 

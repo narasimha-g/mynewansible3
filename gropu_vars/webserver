@@ -1,0 +1,3 @@
+---
+ webserver_on_ubuntu: apache2
+ webserver_on_redhat: httpd
