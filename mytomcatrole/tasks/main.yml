@@ -1,3 +1,10 @@
 ---
 # tasks file for mytomcatrole
+
  - include: myjavainstall.yml
+ - include: mytomusergroup.yml
+ - include: installmytomcat.yml
+ - include: extractmytomcat.yml
+ - include: tompermissions.yml
+ - include: tomconfig.yml
+ - include: tomstart.yml
