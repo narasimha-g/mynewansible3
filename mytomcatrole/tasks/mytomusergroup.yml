@@ -12,4 +12,4 @@
      shell: /bin/false
      home: /opt/tomcat
      groups: tomcat
-     append: yes
+     
