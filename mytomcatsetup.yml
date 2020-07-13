@@ -2,5 +2,5 @@
  - hosts: 172.31.2.201
    become: yes
    roles: 
-    - mytomcatrole 
+    mytomcatrole 
   
